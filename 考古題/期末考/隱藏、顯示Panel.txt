@@ -1,0 +1,71 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="mytest.WebForm1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+&nbsp;&nbsp;
+            <br />
+            &nbsp;
+            <br />
+            <br />
+            <br />
+            <asp:Panel ID="Panel1" runat="server" Height="96px">
+                <meta charset="utf-8" />
+                <b id="docs-internal-guid-8b5ac717-7fff-0263-9a72-238086e31455" style="font-weight:normal;"><span style="font-size:32pt;font-family:Calibri,sans-serif;color:#4A452A;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">這是Panel測試，<meta charset="utf-8" /><b id="docs-internal-guid-9ca37288-7fff-a0b1-80d8-4dd2fb9af9e1" style="font-weight:normal;"><span style="font-size:27.999999999999996pt;font-family:Calibri,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">Visible屬性值來切換顯示Panel控制項</span></b></span></b></asp:Panel>
+            <br />
+            <br />
+            <br />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="隱藏、顯示Panel" />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+    </form>
+</body>
+</html>
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+------------------------上面是WebForm1.aspx檔-------------------------
+----------------------------------------------------------------------
+---------------------------下面是aspx.cs檔----------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace mytest
+{
+    public partial class WebForm1 : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (Panel1.Visible == true)
+                Panel1.Visible = false;
+            else
+                Panel1.Visible = true;
+        }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+    }
+}

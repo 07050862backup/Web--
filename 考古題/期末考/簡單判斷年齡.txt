@@ -1,0 +1,87 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="mytest.WebForm1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:Label ID="Label1" runat="server" Text="輸入年齡:"></asp:Label>
+&nbsp;&nbsp;
+            <br />
+            <asp:TextBox ID="TextBox1" runat="server" Height="51px" OnTextChanged="TextBox1_TextChanged" TextMode="MultiLine" Width="375px"></asp:TextBox>
+            &nbsp;
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="判斷" />
+            <br />
+            <br />
+            <br />
+            <asp:TextBox ID="TextBox2" runat="server" Height="105px" TextMode="MultiLine" Width="372px"></asp:TextBox>
+            <br />
+        </div>
+    </form>
+</body>
+</html>
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+------------------------上面是WebForm1.aspx檔-------------------------
+----------------------------------------------------------------------
+---------------------------下面是aspx.cs檔----------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace mytest
+{
+    public partial class WebForm1 : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            int num1;
+
+
+            num1 = Convert.ToInt32(TextBox1.Text);
+
+            if (num1 <= 18)
+            {
+                TextBox2.Text = "學生票 : 12元";
+            }
+            else
+            {
+                if (num1 >= 65)
+                {
+                    TextBox2.Text = "敬老票 : 8元";
+                }
+                else
+                {
+                    TextBox2.Text = "普通票 : 15元";
+                }
+            }
+
+        }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
