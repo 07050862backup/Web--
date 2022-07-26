@@ -1,0 +1,22 @@
+<html>
+<head>
+<title> 簡單的 Script 範例 </title>
+<script>
+   function ShowTime()
+   {  dt = new Date() ;
+      document.write(dt.toLocaleString()) ;
+   }
+</script>
+</head>
+<body>
+   <a href="JavaScript:alert('重新裝潢, 近日開張')"
+      onMouseOver="window.status='歡迎光臨' ;
+           return true;">
+      旗標出版社</a>
+   <p>
+   <form>
+     <input type=button value="按下我, 就可以看到現在的時間"
+            onClick="ShowTime(); return;">
+   </form>
+</body>
+</html>
