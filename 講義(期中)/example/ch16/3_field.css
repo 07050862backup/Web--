@@ -1,0 +1,45 @@
+body {background-color:#DFEABB;}
+
+#right {
+float: right;
+font-size:17px;
+width:160px;
+padding:5px 0px 0px 0px;
+border:1px double white;
+}
+
+#center {float: right;}
+
+#left {
+float: left;
+width:180px;
+}
+
+#left ul {
+list-style:none;
+margin:0;
+padding:0;
+border:none;
+}
+
+#left li {
+border-bottom:1px solid white;
+margin:0;
+padding:0;
+font-size:17px;
+}
+
+#left a:link,#left a:visited {
+display:block;
+padding:5px 5px 5px 0.5em;
+border-left:12px solid #669933;
+border-right:1px solid #669933;
+background-color:#39561D;
+color:white;
+text-decoration:none;
+}
+
+#left a:hover {
+background-color:#722100;
+color:white;
+}

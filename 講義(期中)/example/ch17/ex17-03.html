@@ -1,0 +1,28 @@
+<!Document>
+<html>
+<head>
+<title>Media Queries</title>
+<style>
+.main{width:100%;}
+.header{width:100%;background-color:blue;height:80px;}
+.center{width:100%;background-color:white;height:380px;}
+.left{width:80%;background-color:green;height:380px;float:left;}
+.right{width:20%;background-color:yellow;height:380px;float:right;}
+.footer{width:100%;background-color:blue;height:80px;clear:both;}
+
+@media screen and (max-width: 639px) {
+ .right{display:none;}
+.left{width:100%;background-color:grey;}
+}
+</style>
+</head>
+<body>
+<div class="main">
+<div class="header"></div>
+<div class="center">
+<div class="left"></div>
+<div class="right"></div>
+<div class="footer"></div>
+</div>
+</body>
+</html>
